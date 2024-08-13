@@ -1,0 +1,38 @@
+def recomendar_sala(num_participantes, tipo_reuniao):
+  # Validação de entradas
+  if not isinstance(num_participantes, int) or num_participantes < 0:
+      return "Número de participantes inválido. Deve ser um número inteiro não negativo."
+  if tipo_reuniao not in ['reunião', 'workshop', 'seminário']:
+      return "Tipo de reunião inválido. Os tipos válidos são: 'reunião', 'workshop', 'seminário'."
+
+  # Lógica de decisão para recomendar a sala
+  if tipo_reuniao == 'reunião':
+      if num_participantes <= 10:
+          return "Sala pequena (capacidade para até 10 pessoas)."
+      elif num_participantes <= 20:
+          return "Sala média (capacidade para até 20 pessoas)."
+      else:
+          return "Sala grande (capacidade para mais de 20 pessoas)."
+  elif tipo_reuniao == 'workshop':
+      if num_participantes <= 15:
+          return "Sala de workshop pequena (capacidade para até 15 pessoas)."
+      elif num_participantes <= 30:
+          return "Sala de workshop média (capacidade para até 30 pessoas)."
+      else:
+          return "Sala de workshop grande (capacidade para mais de 30 pessoas)."
+  elif tipo_reuniao == 'seminário':
+      if num_participantes <= 50:
+          return "Sala de seminário pequena (capacidade para até 50 pessoas)."
+      elif num_participantes <= 100:
+          return "Sala de seminário média (capacidade para até 100 pessoas)."
+      else:
+          return "Sala de seminário grande (capacidade para mais de 100 pessoas)."
+
+# Interface do usuário
+try:
+  num_participantes = int(input("Insira o número de participantes: "))
+  tipo_reuniao = input("Insira o tipo de reunião (reunião, workshop, seminário): ").strip().lower()
+  resultado = recomendar_sala(num_participantes, tipo_reuniao)
+  print(resultado)
+except ValueError:
+  print("Entrada inválida. Por favor, insira um número inteiro para o número de participantes.")
