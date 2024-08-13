@@ -15,10 +15,10 @@ Na empresa que você trabalha, identificou que uma das principais dificuldades d
 3.	Sala Grande: para reuniões com mais de 15 pessoas ou reuniões executivas.
 
 Entrada:
-•	Número de participantes (inteiro);
-•	Tipo de reunião (string): "normal" ou "executiva".
+* Número de participantes (inteiro);
+* Tipo de reunião (string): "normal" ou "executiva".
 Saída:
-•	Recomendação da sala (string): "Sala Pequena", "Sala Média" ou "Sala Grande".
+* Recomendação da sala (string): "Sala Pequena", "Sala Média" ou "Sala Grande".
 
 
 ✔️ **Estrutura da Atividade**
